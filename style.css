@@ -122,3 +122,54 @@ button {
   height: auto;
   border-radius: 0.25em;
 }
+
+/* Sprucing up CV */
+section {
+  margin-bottom: 3em;
+}
+
+section header {
+  border-bottom: 2px solid var(--color-accent);
+  margin-bottom: 1em;
+}
+
+article {
+  margin-bottom: 1.5em;
+}
+
+h3 {
+  font-size: 1.2em;
+  margin-bottom: 0.3em;
+}
+
+article p {
+  margin: 0.3em 0;
+}
+
+article time {
+  font-style: italic;
+  color: oklch(40% 0.1 250);
+  display: inline-block;
+  margin-top: 0.2em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+ul li {
+  background-color: oklch(90% 0.1 250);
+  color: oklch(30% 0.2 250);
+  padding: 0.4em 0.75em;
+  border-radius: 999px;
+  font-size: 0.9em;
+}
+
+body.cv-page {
+  background-color: oklch(98% 0.03 250);
+  padding-block: 2em;
+}
