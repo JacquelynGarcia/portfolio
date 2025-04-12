@@ -173,3 +173,32 @@ body.cv-page {
   background-color: oklch(98% 0.03 250);
   padding-block: 2em;
 }
+
+/* Styling for resume download */
+.download-btn {
+  display: inline-block;
+  margin-bottom: 1em;
+  background-color: var(--color-accent);
+  color: white;
+  padding: 0.6em 1.2em;
+  border-radius: 0.5em;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.download-btn:hover {
+  background-color: oklch(from var(--color-accent) 50% 60% h);
+}
+
+/* Two-column layout for CV */
+.cv-grid {
+  display: grid;
+  gap: 2em;
+}
+
+@media (min-width: 768px) {
+  .cv-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
