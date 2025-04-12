@@ -18,13 +18,23 @@ body {
 
     /* Prevents distortion in smaller viewports */
     padding-inline: 1em;
-  }
+}
 
-  nav {
-    display: flex;
-    margin-bottom: 1.5em;
-    border-bottom: 1px solid oklch(80% 3% 200);
-  }
+/* Typography for headings */
+h1 {
+  font-size: 400%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+nav {
+  display: flex;
+  margin-bottom: 1.5em;
+  border-bottom: 1px solid oklch(80% 3% 200);
+}
 
   /* Makes all nav links take equal space and center text */
 nav a {
@@ -77,4 +87,38 @@ button {
   grid-column: 1 / -1;
   padding: 0.5em;
   cursor: pointer;
+}
+
+/* Projects grid layout */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1.5em;
+  margin: 2em;
+}
+
+.projects article {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  gap: 0.5em;
+  background: #f9f9f9;
+  padding: 1em;
+  border-radius: 0.5em;
+}
+
+.projects h2 {
+  margin: 0;
+}
+
+.projects article:hover {
+  background: #eaeaea;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.projects img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.25em;
 }
