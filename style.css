@@ -170,7 +170,7 @@ ul li {
 }
 
 body.cv-page {
-  background-color: oklch(98% 0.03 250);
+  background-color: white;
   padding-block: 2em;
 }
 
