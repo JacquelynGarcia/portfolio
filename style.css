@@ -1,3 +1,9 @@
+/* Accent color setup */
+html {
+  --color-accent: oklch(65% 50% 0);
+  accent-color: var(--color-accent);
+}
+
 body {
     /* Set line height to 1.5 times the font size
          and use the OS’s UI font as the website font
@@ -13,3 +19,32 @@ body {
     /* Prevents distortion in smaller viewports */
     padding-inline: 1em;
   }
+
+  nav {
+    display: flex;
+    margin-bottom: 1.5em;
+    border-bottom: 1px solid oklch(80% 3% 200);
+  }
+
+  /* Makes all nav links take equal space and center text */
+nav a {
+  flex: 1;
+  text-align: center;
+  padding: 0.5em;
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 0 solid transparent;
+}
+
+nav a.current {
+   /* Thicker underline */
+  border-bottom: 0.4em solid oklch(80% 3% 200);
+
+  /* Reduce bottom padding to balance height */
+  padding-bottom: 0.1em;
+}
+
+nav a:hover {
+  border-bottom: 0.4em solid var(--color-accent);
+  background-color: oklch(from var(--color-accent) 95% 5% h);
+}
