@@ -3,9 +3,9 @@ console.log('IT’S ALIVE!');
 let pages = [
     { url: '', title: 'Home' },
     { url: 'projects/', title: 'Projects' },
-    { url: 'about/', title: 'About' },
     { url: 'contact/', title: 'Contact' },
-    { url: 'https://github.com/yourusername', title: 'GitHub' },
+    { url: 'cv/', title: 'CV' },
+    { url: 'https://github.com/JacquelynGarcia', title: 'GitHub' },
   ];
   
   const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
