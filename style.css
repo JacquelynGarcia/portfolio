@@ -2,6 +2,9 @@
 html {
   --color-accent: oklch(65% 50% 0);
   accent-color: var(--color-accent);
+  color-scheme: light dark;
+  background-color: canvas;
+  color: canvastext;
 }
 
 body {
@@ -33,7 +36,8 @@ h1, h2, h3, h4, h5, h6 {
 nav {
   display: flex;
   margin-bottom: 1.5em;
-  border-bottom: 1px solid oklch(80% 3% 200);
+  --border-color: oklch(50% 10% 200 / 40%);
+  border-bottom: 1px solid var(--border-color);
 }
 
   /* Makes all nav links take equal space and center text */
@@ -47,16 +51,13 @@ nav a {
 }
 
 nav a.current {
-   /* Thicker underline */
-  border-bottom: 0.4em solid oklch(80% 3% 200);
-
-  /* Reduce bottom padding to balance height */
+  border-bottom: 0.4em solid var(--border-color);
   padding-bottom: 0.1em;
 }
 
 nav a:hover {
   border-bottom: 0.4em solid var(--color-accent);
-  background-color: oklch(from var(--color-accent) 95% 5% h);
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
 /* Formatting for contact box */
@@ -201,4 +202,15 @@ body.cv-page {
   .cv-grid {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
+  font-family: inherit;
+}
+.color-scheme select {
+  font: inherit;
 }
