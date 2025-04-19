@@ -31,6 +31,7 @@ document.body.insertAdjacentHTML(
     localStorage.colorScheme = scheme;
   });
 
+
 let pages = [
     { url: '', title: 'Home' },
     { url: 'projects/', title: 'Projects' },
