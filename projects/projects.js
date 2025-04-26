@@ -12,31 +12,24 @@ if (titleElement && projects?.length) {
 }
 
 export function renderProjects(projects, containerElement, headingLevel = 'h2') {
-    if (!Array.isArray(projects) || !containerElement) {
-      console.warn('Invalid data or container');
-      return;
-    }
-  
     containerElement.innerHTML = '';
   
-    for (const project of projects) {
+    projects.forEach(project => {
       const article = document.createElement('article');
+      const headingTag = document.createElement(headingLevel);
+      headingTag.textContent = project.title;
   
-      const title = project.title ?? 'Untitled';
-      const imgSrc = project.image ?? '';
-      const desc = project.description ?? '';
+      const image = document.createElement('img');
+      image.src = project.image;
+      image.alt = project.title;
   
-      article.innerHTML = `
-        <${headingLevel}>${title}</${headingLevel}>
-        <img src="${imgSrc}" alt="${title}">
-        <p>${desc}</p>
-      `;
+      const description = document.createElement('p');
+      description.textContent = project.description;
   
+      article.appendChild(headingTag);
+      article.appendChild(image);
+      article.appendChild(description);
       containerElement.appendChild(article);
-    }
-  
-    if (projects.length === 0) {
-      containerElement.innerHTML = '<p>No projects available at the moment.</p>';
-    }
+    });
   }
   
