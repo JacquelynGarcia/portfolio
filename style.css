@@ -103,7 +103,8 @@ button {
   grid-template-rows: subgrid;
   grid-row: span 3;
   gap: 0.5em;
-  background: #f9f9f9;
+  background-color: color-mix(in oklch, canvas 95%, var(--color-accent) 5%);
+  color: canvastext;
   padding: 1em;
   border-radius: 0.5em;
 }
@@ -113,7 +114,7 @@ button {
 }
 
 .projects article:hover {
-  background: #eaeaea;
+  background-color: color-mix(in oklch, canvas 90%, var(--color-accent) 10%);
   box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
@@ -163,15 +164,21 @@ ul {
 }
 
 ul li {
-  background-color: oklch(90% 0.1 250);
-  color: oklch(30% 0.2 250);
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  background-color: color-mix(in oklch, canvas 85%, var(--color-accent) 15%);
+  color: color-mix(in oklch, canvastext 70%, var(--color-accent) 30%);
   padding: 0.4em 0.75em;
   border-radius: 999px;
   font-size: 0.9em;
 }
 
 body.cv-page {
-  background-color: white;
+  background-color: canvas;
+  color: canvastext;
   padding-block: 2em;
 }
 
