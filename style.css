@@ -214,3 +214,19 @@ body.cv-page {
 .color-scheme select {
   font: inherit;
 }
+
+#profile-stats dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#profile-stats dt {
+  grid-row: 1;
+  font-weight: bold;
+  padding-right: 0.5em;
+}
+
+#profile-stats dd {
+  grid-row: 2;
+  margin-left: 0;
+}
