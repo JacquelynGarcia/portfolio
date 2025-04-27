@@ -2,19 +2,19 @@
     {
         "title": "ESG Stock Predictor",
         "year": 2024,
-        "image": "/images/ESGStock.png",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "This project investigated the integration of Environmental, Social, and Governance criteria with historical financial data to improve stock return predictions and promote sustainable investing."
     },
     {
         "title": "Recipe Analysis",
         "year": 2024,
-        "image": "/images/recipeanalysis.png",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "This analysis is aimed at understanding whether recipes with higher calorie counts are rated differently than those with lower calorie counts. I leveraged predictive models to forecast average ratings based on recipe attributes and reported our findings."
     },
     {
         "title": "Knowledge Graph",
         "year": 2024,
-        "image": "/images/knowledgegraph.jpeg",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "This project extracts and visualizes relationships from clinical research papers using OpenAI GPT-4 and PyVis for creating interactive knowledge graphs. The tool is designed for tele-mental health providers to make informed decisions about treatments for anxiety and depression based on clinical research."
     },
     {
