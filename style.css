@@ -237,3 +237,15 @@ body.cv-page {
   grid-row: 2;
   margin-left: 0;
 }
+
+.project-year {
+  font-family: Baskerville, "Times New Roman", Times, serif;
+  font-variant-numeric: oldstyle-nums;
+  margin-top: 0.5em;
+  font-size: 0.9em;
+  color: #555;
+}
+
+[style*="color-scheme: dark"] .project-year {
+     color: #bbb;
+}
