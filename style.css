@@ -265,6 +265,15 @@ body.cv-page {
   margin: 0;
 }
 
+#projects-pie-plot path {
+  transition: opacity 300ms;
+  cursor: pointer;
+}
+
+#projects-pie-plot:has(path:hover) path:not(:hover) {
+   opacity: 0.5;
+}
+
 .legend {
   list-style: none;
   padding: 1em;
@@ -292,6 +301,7 @@ body.cv-page {
   padding: 0;
   color: inherit;
   font-size: 1em;
+  cursor: pointer;
 }
 
 .swatch {
@@ -300,6 +310,26 @@ body.cv-page {
   aspect-ratio: 1 / 1;
   background-color: var(--color);
   border-radius: 50%;
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+
+  &:is(path) {
+    fill: var(--color);
+  }
+}
+
+#projects-pie-plot path.selected {
+  fill: var(--color);
+}
+
+.legend-item.selected {
+  font-weight: bold;
+}
+
+.legend-item.selected .swatch {
+  background-color: var(--color);
 }
 
 [style*="color-scheme: dark"] .legend {

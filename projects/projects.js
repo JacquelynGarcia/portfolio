@@ -2,6 +2,7 @@ import { fetchJSON, renderProjects } from '../global.js';
 import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm';
 
 let query = '';
+let selectedIndex = -1;
 const projects = await fetchJSON('../lib/projects.json');
 const projectsContainer = document.querySelector('.projects');
 const searchInput = document.querySelector('.searchBar');
@@ -36,7 +37,16 @@ function renderPieChart(projectsGiven) {
   arcData.forEach((d, i) => {
       svg.append('path')
          .attr('d', arcGenerator(d))
-         .attr('fill', colors(i));
+         .attr('fill', colors(i))
+         .on('click', () => {
+          selectedIndex = selectedIndex === i ? -1 : i;
+
+          svg.selectAll('path')
+             .attr('class', (_, idx) => selectedIndex === idx ? 'selected' : null);
+
+          legend.selectAll('li')
+                .attr('class', (_, idx) => selectedIndex === idx ? 'legend-item selected' : 'legend-item');
+       });
   });
 
   data.forEach((d, i) => {
@@ -47,6 +57,16 @@ function renderPieChart(projectsGiven) {
           <span class="swatch"></span>
           ${d.label} <em>(${d.value})</em>
       `);
+      li.on('click', () => {
+        selectedIndex = selectedIndex === i ? -1 : i;
+
+        svg.selectAll('path')
+           .attr('class', (_, idx) => selectedIndex === idx ? 'selected' : null);
+
+        legend.selectAll('li')
+              .attr('class', (_, idx) => selectedIndex === idx ? 'legend-item selected' : 'legend-item');
+
+    });
   });
 }
 
