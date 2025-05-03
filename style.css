@@ -249,3 +249,10 @@ body.cv-page {
 [style*="color-scheme: dark"] .project-year {
      color: #bbb;
 }
+
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+
+  overflow: visible;
+}
