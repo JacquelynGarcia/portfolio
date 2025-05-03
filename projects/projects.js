@@ -8,7 +8,7 @@ const projectsContainer = document.querySelector('.projects');
 const searchInput = document.querySelector('.searchBar');
 
 const arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
-const colors = d3.scaleOrdinal(d3.schemeTableau10);
+const colors = d3.scaleOrdinal(d3.schemeSet2);
 const sliceGenerator = d3.pie().value((d) => d.value);
 const svg = d3.select('#projects-pie-plot');
 const legend = d3.select('.legend');
@@ -46,6 +46,14 @@ function renderPieChart(projectsGiven) {
 
           legend.selectAll('li')
                 .attr('class', (_, idx) => selectedIndex === idx ? 'legend-item selected' : 'legend-item');
+          
+          if (selectedIndex === -1) {
+            renderProjects(projects, projectsContainer, 'h2');
+          } else {
+            const selectedYear = String(data[selectedIndex].label);
+            let yearFilteredProjects = projects.filter(p => String(p.year) === selectedYear);
+            renderProjects(yearFilteredProjects, projectsContainer, 'h2');
+          }
        });
   });
 
@@ -65,7 +73,14 @@ function renderPieChart(projectsGiven) {
 
         legend.selectAll('li')
               .attr('class', (_, idx) => selectedIndex === idx ? 'legend-item selected' : 'legend-item');
-
+              
+        if (selectedIndex === -1) {
+          renderProjects(projects, projectsContainer, 'h2');
+        } else {
+          const selectedYear = String(data[selectedIndex].label);
+          let yearFilteredProjects = projects.filter(p => String(p.year) === selectedYear);
+          renderProjects(yearFilteredProjects, projectsContainer, 'h2');
+        }
     });
   });
 }

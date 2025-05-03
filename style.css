@@ -253,9 +253,11 @@ body.cv-page {
 .container {
   display: flex;
   align-items: flex-start;
-  flex-wrap: rap;
+  flex-wrap: nowrap;
   gap: 2em;
   margin-block: 2em;
+  max-width: 60em;
+  margin-inline: auto;
 }
 
 #projects-pie-plot {
@@ -314,10 +316,6 @@ body.cv-page {
 
 .selected {
   --color: oklch(60% 45% 0) !important;
-
-  &:is(path) {
-    fill: var(--color);
-  }
 }
 
 #projects-pie-plot path.selected {
@@ -333,5 +331,23 @@ body.cv-page {
 }
 
 [style*="color-scheme: dark"] .legend {
+  border-color: #555;
+}
+
+.searchBar {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 60em;
+  margin-inline: auto;
+  margin-block: 2em;
+  padding: 0.7em 1em;
+  font-size: 1em;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+}
+
+/* Dark mode adjustment for search bar */
+[style*="color-scheme: dark"] .searchBar {
   border-color: #555;
 }
