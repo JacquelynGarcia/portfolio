@@ -37,6 +37,7 @@ let pages = [
     { url: 'projects/', title: 'Projects' },
     { url: 'contact/', title: 'Contact' },
     { url: 'cv/', title: 'CV' },
+    { url: 'Meta/', title: 'Meta'},
     { url: 'https://github.com/JacquelynGarcia', title: 'GitHub' },
   ];
   
