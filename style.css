@@ -396,3 +396,147 @@ h1 {
   font-size: 1.1rem;
   line-height: 1.6;
 }
+
+
+html {
+  --color-accent: oklch(0.6 0.0926 310.1);
+  accent-color: var(--color-accent);
+  color-scheme: light dark;
+  background-color: canvas;
+  color: canvastext;
+}
+
+body {
+  font: 100%/1.5 system-ui;
+  max-width: 125ch;
+  margin-inline: max(1em, (100% - 125ch) / 2);
+  padding: 10px;
+}
+
+/* Styling for the stats display (the <dl> in #stats) */
+#stats dl {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10em, 1.2fr));
+  gap: 1em;
+  row-gap: 0em;
+}
+
+#stats dt {
+  grid-row: 1;
+  align-items: start;
+  font-size: 0.8em;
+}
+
+#stats dd {
+  grid-row: 2;
+  margin: 0;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+/* Styling for the language breakdown (the <dl> in #language-breakdown) */
+#language-breakdown {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8em, 1fr));
+  gap: 1em;
+  row-gap: 0em;
+  font-family: monospace;
+}
+
+#language-breakdown dt {
+  grid-row: 1;
+  align-items: start;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
+#language-breakdown dd {
+  grid-row: 2;
+  margin: 0;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+/* Styling for the chart container */
+#chart {
+  padding: 1em;
+  max-width: 950px;
+  overflow: visible;
+}
+
+/* Styling for the gridlines */
+.gridlines {
+  opacity: 0.2; /* Makes them subtle */
+  stroke: lightgray; /* Optional: set a color for the lines */
+  stroke-width: 0.5px; /* Optional: adjust the thickness */
+}
+
+/* Styling for the tooltip */
+#commit-tooltip {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5em;
+  backdrop-filter: blur(10px);
+  padding: 0.8em;
+  z-index: 10;
+}
+
+dl.info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.3em 0.6em;
+  margin-bottom: 0.5em;
+  font-size: 0.9em;
+}
+
+dl.info dt {
+  font-weight: bold;
+  color: #555;
+}
+
+dl.info dd {
+  margin-left: 0;
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Styling for the circles in the scatterplot */
+circle {
+  transition: transform 200ms ease;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+circle:hover {
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+/* Styling for selected circles */
+circle.selected {
+  fill: #FFA500;
+  opacity: 1 !important;
+}
+
+/* Styling for the brush selection rectangle */
+@keyframes marching-ants {
+  to {
+    stroke-dashoffset: -8;
+  }
+}
+
+.selection {
+  fill-opacity: 0.1;
+  stroke: var(--color-accent);
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 2s linear infinite;
+  cursor: grab;
+}
