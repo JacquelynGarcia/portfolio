@@ -222,6 +222,7 @@ body.cv-page {
   font: inherit;
 }
 
+/* Profile Stats styling */
 #profile-stats dl {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -238,6 +239,7 @@ body.cv-page {
   margin-left: 0;
 }
 
+/* Projects Page styling */
 .project-year {
   font-family: Baskerville, "Times New Roman", Times, serif;
   font-variant-numeric: oldstyle-nums;
@@ -397,22 +399,6 @@ h1 {
   line-height: 1.6;
 }
 
-
-html {
-  --color-accent: oklch(0.6 0.0926 310.1);
-  accent-color: var(--color-accent);
-  color-scheme: light dark;
-  background-color: canvas;
-  color: canvastext;
-}
-
-body {
-  font: 100%/1.5 system-ui;
-  max-width: 125ch;
-  margin-inline: max(1em, (100% - 125ch) / 2);
-  padding: 10px;
-}
-
 /* Styling for the stats display (the <dl> in #stats) */
 #stats dl {
   display: grid;
@@ -466,9 +452,9 @@ body {
 
 /* Styling for the gridlines */
 .gridlines {
-  opacity: 0.2; /* Makes them subtle */
-  stroke: lightgray; /* Optional: set a color for the lines */
-  stroke-width: 0.5px; /* Optional: adjust the thickness */
+  opacity: 0.2;
+  stroke: lightgray;
+  stroke-width: 0.5px;
 }
 
 /* Styling for the tooltip */
@@ -521,7 +507,7 @@ circle:hover {
 
 /* Styling for selected circles */
 circle.selected {
-  fill: #FFA500;
+  fill: #0000FF;
   opacity: 1 !important;
 }
 

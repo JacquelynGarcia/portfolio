@@ -107,9 +107,10 @@ function renderScatterPlot(data, commits) {
         width: width - margin.left - margin.right,
         height: height - margin.top - margin.bottom,
     };
+    
     const colorScale = d3.scaleLinear()
                          .domain([0, 6, 12, 18, 24])
-                         .range(['#00008B', '#FFDC00', '#FFDC00', 'steelblue', '#00008B']); 
+                         .range(['#FF00FF', '#ADFF2F', '#ADFF2F', '#808000', '#FF00FF']); 
 
     const svg = d3
         .select('#chart')
