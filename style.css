@@ -527,3 +527,23 @@ circle.selected {
   animation: marching-ants 2s linear infinite;
   cursor: grab;
 }
+
+.project-link-container {
+  margin-top: 0.5em; /* Keep the spacing */
+}
+
+.project-link {
+  display: inline-block;
+  padding: 0.3em 0.75em; /* Even smaller padding */
+  background-color: #FF69B4; /* Your pink accent color */
+  color: white;
+  text-decoration: none;
+  border-radius: 3px; /* Slightly smaller border-radius to match */
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  font-size: 0.8em; /* Even smaller font size */
+}
+
+.project-link:hover {
+  background-color: #D84FA9; /* Slightly darker pink on hover */
+}

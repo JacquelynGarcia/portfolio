@@ -3,31 +3,36 @@
         "title": "Infinite Spokes",
         "year": 2025,
         "image": "https://jacquelyngarcia.github.io/portfolio/images/infinitespokes.png",
-        "description": "An interactive map of Cambridge and Boston showcasing bike activity and bike routes. The visualization shows cycling patterns, helping users explore urban bike traffic and infrastructure in real time."
+        "description": "An interactive map of Cambridge and Boston showcasing bike activity and bike routes. The visualization shows cycling patterns, helping users explore urban bike traffic and infrastructure in real time.",
+        "link": "https://jacquelyngarcia.github.io/InfiniteSpokes/"
     },
     {
         "title": "Mouse Estrous Cycle Visualization",
         "year": 2025,
         "image": "https://jacquelyngarcia.github.io/portfolio/images/mouse.png",
-        "description": "This interactive tool explores temperature and activity patterns across the four phases of the female mouse estrous cycle: Proestrus, Estrus, Metestrus, and Diestrus. It lets you observe daily changes, compare phases, and uncover relationships between physiological patterns.."
+        "description": "This interactive tool explores temperature and activity patterns across the four phases of the female mouse estrous cycle: Proestrus, Estrus, Metestrus, and Diestrus. It lets you observe daily changes, compare phases, and uncover relationships between physiological patterns.",
+        "link": "https://nsam160.github.io/Project-3/"
     },
     {
         "title": "ESG Stock Predictor",
         "year": 2024,
         "image": "https://jacquelyngarcia.github.io/portfolio/images/ESGStock.png",
-        "description": "This project investigated the integration of Environmental, Social, and Governance criteria with historical financial data to improve stock return predictions and promote sustainable investing."
+        "description": "This project investigated the integration of Environmental, Social, and Governance criteria with historical financial data to improve stock return predictions and promote sustainable investing.",
+        "link": "https://github.com/JacquelynGarcia/ESGStockPredictor"
     },
     {
         "title": "Recipe Analysis",
         "year": 2024,
         "image": "https://jacquelyngarcia.github.io/portfolio/images/recipeanalysis.png",
-        "description": "This analysis is aimed at understanding whether recipes with higher calorie counts are rated differently than those with lower calorie counts. I leveraged predictive models to forecast average ratings based on recipe attributes and reported our findings."
+        "description": "This analysis is aimed at understanding whether recipes with higher calorie counts are rated differently than those with lower calorie counts. I leveraged predictive models to forecast average ratings based on recipe attributes and reported our findings.",
+        "link": "https://jacquelyngarcia.github.io/RecipeAnalysis/"
     },
     {
         "title": "Knowledge Graph",
         "year": 2024,
         "image": "https://jacquelyngarcia.github.io/portfolio/images/knowledgegraph.jpeg",
-        "description": "This project extracts and visualizes relationships from clinical research papers using OpenAI GPT-4 and PyVis for creating interactive knowledge graphs. The tool is designed for tele-mental health providers to make informed decisions about treatments for anxiety and depression based on clinical research."
+        "description": "This project extracts and visualizes relationships from clinical research papers using OpenAI GPT-4 and PyVis for creating interactive knowledge graphs. The tool is designed for tele-mental health providers to make informed decisions about treatments for anxiety and depression based on clinical research.",
+        "link": "https://github.com/BrightsideHealthBTT/AI-Studio-Project"
     },
     {
         "title": "Iusto saepe impedit exercitationem!",
