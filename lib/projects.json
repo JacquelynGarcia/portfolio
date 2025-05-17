@@ -1,5 +1,17 @@
 [
     {
+        "title": "Infinite Spokes",
+        "year": 2025,
+        "image": "https://jacquelyngarcia.github.io/portfolio/images/infinitespokes.png",
+        "description": "An interactive map of Cambridge and Boston showcasing bike activity and bike routes. The visualization shows cycling patterns, helping users explore urban bike traffic and infrastructure in real time."
+    },
+    {
+        "title": "Mouse Estrous Cycle Visualization",
+        "year": 2025,
+        "image": "https://jacquelyngarcia.github.io/portfolio/images/mouse.png",
+        "description": "This interactive tool explores temperature and activity patterns across the four phases of the female mouse estrous cycle: Proestrus, Estrus, Metestrus, and Diestrus. It lets you observe daily changes, compare phases, and uncover relationships between physiological patterns.."
+    },
+    {
         "title": "ESG Stock Predictor",
         "year": 2024,
         "image": "https://jacquelyngarcia.github.io/portfolio/images/ESGStock.png",
@@ -16,18 +28,6 @@
         "year": 2024,
         "image": "https://jacquelyngarcia.github.io/portfolio/images/knowledgegraph.jpeg",
         "description": "This project extracts and visualizes relationships from clinical research papers using OpenAI GPT-4 and PyVis for creating interactive knowledge graphs. The tool is designed for tele-mental health providers to make informed decisions about treatments for anxiety and depression based on clinical research."
-    },
-    {
-        "title": "Voluptatibus inventore amet voluptates?",
-        "year": 2023,
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Animi officia, nesciunt odit soluta expedita, ducimus et porro sunt aspernatur accusamus eveniet neque consectetur. Officia voluptatem explicabo iusto laboriosam aperiam eius quo, illo hic aut odio. Perspiciatis, nostrum doloribus!"
-    },
-    {
-        "title": "Suscipit adipisci architecto illo!",
-        "year": 2023,
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Ipsa dolor nisi rem! Officia minus eaque tempora ipsam amet, sed, eveniet harum quidem, eum explicabo soluta? Officia ea quisquam nam nobis fuga expedita culpa enim. Ab delectus laudantium perferendis."
     },
     {
         "title": "Iusto saepe impedit exercitationem!",
