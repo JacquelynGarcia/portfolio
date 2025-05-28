@@ -14,6 +14,11 @@
     <div id="stats"></div>
 
     <h2>Commits by time of day</h2>
+    <div style="display: flex; align-items: baseline; gap: 1em;">
+        <label for="commit-progress">Show commits until: </label>
+        <input type="range" id="commit-progress" min="0" max="100" value="100" />
+        <time id="commit-time" style="margin-left: auto;"></time>
+    </div>
     <div id="chart"></div>
 
     <dl id="commit-tooltip" class="info tooltip" hidden>

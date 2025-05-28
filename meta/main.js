@@ -2,6 +2,9 @@ import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm';
 
 let xScale;
 let yScale;
+let commitProgress = 100;
+let commitMaxTime;
+let timeScale;
 
 async function loadData() {
     const data = await d3.csv('loc.csv', (row) => ({
@@ -277,7 +280,34 @@ function renderLanguageBreakdown(selection) {
     }
 }
 
+function onTimeSliderChange() {
+    const slider = document.getElementById('commit-progress');
+    commitProgress = +slider.value;
+    commitMaxTime = timeScale.invert(commitProgress);
+  
+    const timeElem = document.getElementById('commit-time');
+    timeElem.textContent = commitMaxTime.toLocaleString('en', {
+      dateStyle: 'long',
+      timeStyle: 'short'
+    });
+}
+
 let data = await loadData();
 let commits = processCommits(data);
+
+timeScale = d3
+  .scaleTime()
+  .domain([
+    d3.min(commits, (d) => d.datetime),
+    d3.max(commits, (d) => d.datetime),
+  ])
+  .range([0, 100]);
+
+commitMaxTime = timeScale.invert(commitProgress);
+
+
 renderCommitInfo(data, commits);
 renderScatterPlot(data, commits);
+
+document.getElementById('commit-progress').addEventListener('input', onTimeSliderChange);
+onTimeSliderChange();
