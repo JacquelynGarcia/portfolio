@@ -508,7 +508,7 @@ circle:hover {
 
 /* Styling for selected circles */
 circle.selected {
-  fill: #0000FF;
+  fill: hsl(317, 100%, 50%);
   opacity: 1 !important;
 }
 
@@ -546,4 +546,97 @@ circle.selected {
 
 .project-link:hover {
   background-color: #D84FA9; /* Slightly darker pink on hover */
+}
+
+.line {
+  display: flex;
+  width: 0.5em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+#files div dt small {
+  display: block;
+  font-size: 0.75em;
+  opacity: 0.6;
+  margin-top: 0.1em;
+}
+
+#files {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+
+  > div {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: subgrid;
+  }
+
+  dt {
+      grid-column: 1;
+      margin-right: 1em;
+  }
+
+  dd {
+      grid-column: 2;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: start;
+      align-content: start;
+      gap: 0.15em;
+      padding-top: 0.6em;
+      margin-left: 0;
+  }
+}
+
+.loc {
+  display: flex;
+  width: 0.5em;
+  aspect-ratio: 1;
+  background: steelblue;
+  border-radius: 50%;
+}
+
+#scrolly-1 {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+
+  > * {
+      flex: 1;
+  }
+}
+
+#scatter-story {
+  position: relative;
+}
+
+#scatter-plot {
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  height: 50vh;
+}
+
+#scrolly-2 {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+
+  > * {
+      flex: 1;
+  }
+}
+
+#scatter-story-2 {
+  position: relative;
+}
+
+#file-plot {
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  height: 50vh;
 }
